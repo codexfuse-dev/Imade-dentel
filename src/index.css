@@ -293,6 +293,17 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; colo
 .footer-col .logo-title { color: var(--white); }
 .footer-desc { color: var(--text-light); font-size: 0.9rem; line-height: 1.7; margin-bottom: 25px; }
 .footer-chevron { display: none; width: 20px; height: 20px; fill: var(--white); transition: var(--transition); }
+
+/* Ensure footer links show on desktop */
+@media (min-width: 768px) {
+  .footer-accordion-content,
+  .footer-col .accordion-content {
+    display: flex !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
+
 /* Social buttons — footer */
 .footer-socials { display: flex; gap: 10px; flex-wrap: wrap; }
 .footer-social-btn {
@@ -685,11 +696,14 @@ textarea.form-control { height: 150px; resize: none; }
     .footer-col-title { font-size: 1.1rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; margin-bottom: 0; padding-bottom: 15px; }
     .footer-col-title::after { display: none; /* Hide the little bottom line on mobile titles */ }
     .footer-chevron { display: block; }
+    .footer-col .logo { justify-content: center; width: 100%; }
+    .footer-desc { text-align: center; }
+    .footer-socials { justify-content: center; width: 100%; }
     
-    .accordion-content { display: none; padding-bottom: 20px; }
-    .accordion-col.active .accordion-content { display: flex; animation: fadeIn 0.3s ease; }
-    .accordion-col.active .footer-chevron { transform: rotate(180deg); fill: var(--accent); }
-    .accordion-col.active .footer-col-title { color: var(--accent); }
+    .footer-accordion-content { display: none; padding-bottom: 20px; }
+    .footer-accordion-col.active .footer-accordion-content { display: flex; animation: fadeIn 0.3s ease; }
+    .footer-accordion-col.active .footer-chevron { transform: rotate(180deg); fill: var(--accent); }
+    .footer-accordion-col.active .footer-col-title { color: var(--accent); }
 
     /* Grids */
     .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }

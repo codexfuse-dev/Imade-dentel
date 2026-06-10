@@ -76,33 +76,33 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className={`footer-col accordion-col ${openSection === 'links' ? 'active' : ''}`}>
+        <div className={`footer-col footer-accordion-col ${openSection === 'links' ? 'active' : ''}`}>
           <h4 className="footer-col-title" onClick={() => toggle('links')}>
             Quick Links <ChevronDown />
           </h4>
-          <div className="footer-links accordion-content">
+          <div className="footer-links footer-accordion-content">
             {[['/', 'Home'], ['/about', 'About Us'], ['/services', 'Our Services'], ['/appointment', 'Book Appointment']].map(([to, label]) => (
               <Link key={to} to={to} className="footer-link"><ArrowIcon />{label}</Link>
             ))}
           </div>
         </div>
 
-        <div className={`footer-col accordion-col ${openSection === 'services' ? 'active' : ''}`}>
+        <div className={`footer-col footer-accordion-col ${openSection === 'services' ? 'active' : ''}`}>
           <h4 className="footer-col-title" onClick={() => toggle('services')}>
             Our Services <ChevronDown />
           </h4>
-          <div className="footer-links accordion-content">
+          <div className="footer-links footer-accordion-content">
             {['Dental Implants', 'Teeth Whitening', 'Orthodontics', 'Scaling & Polishing', 'Tooth Extraction', 'Crowns & Bridges'].map(s => (
               <Link key={s} to="/services" className="footer-link"><ArrowIcon />{s}</Link>
             ))}
           </div>
         </div>
 
-        <div className={`footer-col accordion-col ${openSection === 'contact' ? 'active' : ''}`}>
+        <div className={`footer-col footer-accordion-col ${openSection === 'contact' ? 'active' : ''}`}>
           <h4 className="footer-col-title" onClick={() => toggle('contact')}>
             Contact Us <ChevronDown />
           </h4>
-          <div className="footer-contact-list accordion-content">
+          <div className="footer-contact-list footer-accordion-content">
             <div className="footer-contact-item">
               <div className="footer-contact-icon">
                 <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" /></svg>
