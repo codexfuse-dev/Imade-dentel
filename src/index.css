@@ -775,3 +775,106 @@ textarea.form-control { height: 150px; resize: none; }
     .logo svg { width: 32px; height: 32px; }
     .logo-title { font-size: 0.9rem; }
 }
+
+/* ── Floating WhatsApp Live Chat Button ─────────────────────── */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    animation: whatsapp-pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    background-color: #1da851;
+    transform: translateY(-5px) scale(1.08);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.55);
+}
+
+.whatsapp-float svg {
+    width: 32px;
+    height: 32px;
+    fill: #FFF;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover svg {
+    transform: scale(1.1);
+}
+
+/* Pulse Glow Animation */
+@keyframes whatsapp-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7), 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0), 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Tooltip styles */
+.whatsapp-tooltip {
+    position: absolute;
+    right: 75px;
+    background-color: #0E384C; /* Match brand primary color */
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    transform: translateX(10px);
+    pointer-events: none;
+}
+
+.whatsapp-float:hover .whatsapp-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.whatsapp-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -6px;
+    transform: translateY(-50%);
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent #0E384C;
+}
+
+/* Responsive adjustment for mobile screens */
+@media (max-width: 767px) {
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+    .whatsapp-float svg {
+        width: 26px;
+        height: 26px;
+    }
+    .whatsapp-tooltip {
+        display: none; /* Hide tooltip on mobile to avoid clutter */
+    }
+}
+
