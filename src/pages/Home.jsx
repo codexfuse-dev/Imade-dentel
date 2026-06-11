@@ -37,7 +37,7 @@ export default function Home() {
           </div>
           <div className="hero-image-wrapper">
             <div className="hero-img-box">
-              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800" alt="Imdad Dental Clinic" />
+              <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800" alt="Imdad Dental Clinic" />
             </div>
             <div className="hero-doctor-card">
               <div className="doc-avatar">
@@ -82,13 +82,13 @@ export default function Home() {
         <div className="container about-grid">
           <div className="about-images-wrapper">
             <div className="about-img-box large">
-              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=500" alt="Dental Care Session" />
+              <img src="/images/about1.png" alt="Dental Care Session" />
             </div>
             <div className="about-img-box">
-              <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=400" alt="Tooth Implant" />
+              <img src="/images/about2.png" alt="Tooth Implant" />
             </div>
             <div className="about-img-box">
-              <img src="https://images.unsplash.com/photo-1512223792601-592a9809eed4?auto=format&fit=crop&q=80&w=400" alt="Teeth Scaling" />
+              <img src="/images/about3.png" alt="Teeth Scaling" />
             </div>
             <div className="experience-badge">
               <span className="exp-years">15+</span>
